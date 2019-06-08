@@ -1,0 +1,25 @@
+<% include partials/header %>
+<div class="container">
+<header class="jumbotron" >
+    <div class="container">
+    <h1> This is yelp camp Ground Enjoy the party</h1>
+    <p>This is just a fun website i really need to work hard to final submission</p>
+    <p>
+        <a class="btn btn-primary btn-large"  href="/campground/new">Click Here for Add new</a>
+    </p>
+    </div>
+</header>
+    <div class="row" style="display:flex; flex-wrap: wrap;">
+        <% camp.forEach(function(cam){ %>
+        <div class="col-md-3 col-sm-6">
+             <div class="thumbnail">
+                <img src ="<%=cam.img%>">
+                <div class="caption">
+                    <h4><%=cam.title%></h4>
+                </div>
+              </div>
+            </div>
+        <% }) %>
+    </div>    
+</div>
+<% include partials/footer %>
